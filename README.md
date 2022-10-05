@@ -2,6 +2,13 @@
 
 Look at the [Content documentation](https://content-v2.nuxtjs.org/) to learn more.
 
+## Observed issue
+
+During development (e.g. `npm run dev`) navigating to the about page via click behaves as expected.
+Refreshing the /about page will briefly flash "other layout" before reverting to "default layout".
+
+Building and testing (e.g `npm run build && node .output/server/index.mjs`), this no longer happens.
+
 ## Setup
 
 Make sure to install the dependencies:
