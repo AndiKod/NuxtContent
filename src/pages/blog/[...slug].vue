@@ -1,10 +1,11 @@
 <template>
-  <main>
+  <ui-Header/>
+  <article class="prose lg:prose-xl container mx-auto max-w-3xl p-8 flex-grow">
     <NuxtLayout :name="layout">
-      <h2>{{data.title}}</h2>
+      <h1>{{data.title}}</h1>
       <ContentDoc />
     </NuxtLayout>
-  </main>
+  </article>
 </template>
 
 <script setup>

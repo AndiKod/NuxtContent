@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <main>
+  <main class="prose lg:prose-xl container mx-auto max-w-3xl p-8 flex-grow">
     <h2>Articles</h2>
     <ul>
       <li v-for="article in articles">
