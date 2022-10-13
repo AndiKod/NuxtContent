@@ -1,6 +1,16 @@
 <template>
-<div class=".once">
-  <div class="font-sans">This is the default layout. Go <NuxtLink to="/test" class="text-xl text-blue-900">Blog</NuxtLink></div>
-    <slot/>
-</div>
+  <div class=".once">  
+      <slot/>
+  </div>
 </template>
+
+<script setup lang="ts">
+useHead({
+  script: [
+    {
+      src: 'https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js',
+      defer: true
+    }
+  ]
+})
+</script>
