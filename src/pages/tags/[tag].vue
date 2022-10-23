@@ -29,23 +29,24 @@
 
 <script setup lang="ts">
 
-
 const route = useRoute()
 // When accessing /posts/1, route.params.id will be 1
-console.log(route.params._tag)
+console.log(route.params.tag)
 
-
+useHead({
+  title: `NuxtCont ${route.params.tag} articles`
+})
 
 
   const tags = await queryContent('tags')
-               .where({ name: { $contains: route.params._tag } })
+               .where({ name: { $contains: route.params.tag } })
                .limit(1)
                .find() 
   const tag = tags.length > 0 ? tags[0] : {}
           
 
   const articles = await queryContent('blog')
-                  .where({ tags: { $contains: route.params._tag } })
+                  .where({ tags: { $contains: route.params.tag } })
                   .sort({ createdAt: -1 })
                   .find()
 

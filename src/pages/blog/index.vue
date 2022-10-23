@@ -76,4 +76,3 @@ console.log('user:'+ user.value)
   </div>
   
 </template>
-
